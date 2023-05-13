@@ -26,7 +26,7 @@ public class EncargadosController {
     public String agregarEncargado(Model model){
         Encargado encargado = new Encargado();
         model.addAttribute("encargado", encargado);
-        return "encargado/nuevoEncargado";
+        return "actualizarEngargados";
     }
 
     @PostMapping("/guardarEncargado")

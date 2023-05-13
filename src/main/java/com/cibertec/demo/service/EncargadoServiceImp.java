@@ -3,11 +3,13 @@ package com.cibertec.demo.service;
 import com.cibertec.demo.model.Encargado;
 import com.cibertec.demo.repository.EncargadosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class EncargadoServiceImp implements EncargadoService{
+
 
     @Autowired
     private EncargadosRepository encargadosRepository;

@@ -10,7 +10,7 @@
 
 <div class="container my-2">
     <h1>Listado de Albergues</h1>
-    <a th:href="@{/nuevoAlbergue}" class="btn btn-outline-dark"><img th:src="@{/img/agregar.png}" alt="Agregar" width="30" height="30"/> Agregar Vehiculo</a>
+    <a th:href="@{/nuevoEncargado}" class="btn btn-outline-dark"><img th:src="@{/img/agregar.png}" alt="Agregar" width="30" height="30"/> Agregar Vehiculo</a>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -28,20 +28,20 @@
         <tbody>
         <tr th:each="encargado : ${listaEncargados}">
             <td th:text="${encargado.getIdEncargado()}" > </td>
-            <td th:text="${encargado.getNomEncargado()}" > </td>
-            <td th:text="${encargado.getApeEncargado()}" > </td>
-            <td th:text="${encargado.getTelefono()}" > </td>
+            <td th:text="${encargado.getNomEn()}" > </td>
+            <td th:text="${encargado.getApeEn()}" > </td>
+            <td th:text="${encargado.getTel()}" > </td>
             <td th:text="${encargado.getDni()}" > </td>
-            <td th:text="${encargado.NombreEstado()}" ></td>
+            <td th:text="${encargado.EstadoEncargado()}" ></td>
             <td style="text-align: center; vertical-align: middle;">
                 <div class="bg-image hover-zoom">
-                    <a th:href="@{/actualizarEncargado/{id}(id=${encargado.id})}">
+                    <a th:href="@{/actualizarEncargados/{id}(id=${encargado.idEncargado})}">
                         <img th:src="@{/img/actualizar.png}" alt="Actualizar" width="30" height="30">
                     </a></div>
             </td>
             <td style="text-align: center; vertical-align: middle;">
                 <div class="bg-image hover-zoom">
-                    <a th:href="@{/eliminarEncargado/{id}(id=${encargado.id})}">
+                    <a th:href="@{/eliminarEncargados/{id}(id=${encargado.idEncargado})}">
                         <img th:src="@{/img/eliminar.png}" alt="Eliminar" width="30" height="30">
                     </a>
                 </div>
