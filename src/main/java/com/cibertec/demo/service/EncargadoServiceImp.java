@@ -1,6 +1,6 @@
 package com.cibertec.demo.service;
 
-import com.cibertec.demo.model.Encargados;
+import com.cibertec.demo.model.Encargado;
 import com.cibertec.demo.repository.EncargadosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,25 +13,25 @@ public class EncargadoServiceImp implements EncargadoService{
     private EncargadosRepository encargadosRepository;
 
     @Override
-    public List<Encargados> listarEncargados() {
+    public List<Encargado> listarEncargados() {
         return encargadosRepository.findAll();
     }
 
     @Override
-    public void guardarEncargos(Encargados encargados) {
-        encargadosRepository.save(encargados);
+    public void guardarEncargos(Encargado encargado) {
+        encargadosRepository.save(encargado);
     }
 
     @Override
-    public Encargados obtenerEncargados(long id) {
-        Optional<Encargados> opcional = encargadosRepository.findById(id);
-        Encargados encargados;
+    public Encargado obtenerEncargados(long id) {
+        Optional<Encargado> opcional = encargadosRepository.findById(id);
+        Encargado encargado;
         if (opcional.isPresent()){
-            encargados = opcional.get();
+            encargado = opcional.get();
         }else {
             throw new RuntimeException("Encargado no encontrado por el Id"+ id);
         }
-        return encargados;
+        return encargado;
     }
 
     @Override

@@ -26,22 +26,22 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="encargados : ${listaEncargados}">
-            <td th:text="${encargados.getIdEncargado()}" > </td>
-            <td th:text="${encargados.getNomEncargado()}" > </td>
-            <td th:text="${encargados.getApeEncargado()}" > </td>
-            <td th:text="${albergue.getTelefono()}" > </td>
-            <td th:text="${encargados.getDni()}" > </td>
-            <td th:text="${albergue.NombreEstado()}" ></td>
+        <tr th:each="encargado : ${listaEncargados}">
+            <td th:text="${encargado.getIdEncargado()}" > </td>
+            <td th:text="${encargado.getNomEncargado()}" > </td>
+            <td th:text="${encargado.getApeEncargado()}" > </td>
+            <td th:text="${encargado.getTelefono()}" > </td>
+            <td th:text="${encargado.getDni()}" > </td>
+            <td th:text="${encargado.NombreEstado()}" ></td>
             <td style="text-align: center; vertical-align: middle;">
                 <div class="bg-image hover-zoom">
-                    <a th:href="@{/actualizarEncargado/{id}(id=${encargados.id})}">
+                    <a th:href="@{/actualizarEncargado/{id}(id=${encargado.id})}">
                         <img th:src="@{/img/actualizar.png}" alt="Actualizar" width="30" height="30">
                     </a></div>
             </td>
             <td style="text-align: center; vertical-align: middle;">
                 <div class="bg-image hover-zoom">
-                    <a th:href="@{/eliminarEncargado/{id}(id=${encargados.id})}">
+                    <a th:href="@{/eliminarEncargado/{id}(id=${encargado.id})}">
                         <img th:src="@{/img/eliminar.png}" alt="Eliminar" width="30" height="30">
                     </a>
                 </div>

@@ -8,8 +8,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "tb_encargados")
-public class Encargados {
+@Table(name = "tb_encargado")
+public class Encargado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idEncargado")
@@ -25,9 +25,7 @@ public class Encargados {
     @Column(name = "Estado", length = 1, nullable = false)
     public  int estado;
 
-    public Encargados() {
 
-    }
 
     public String EstadoEncargado(){
         String estadoEncargado = null;

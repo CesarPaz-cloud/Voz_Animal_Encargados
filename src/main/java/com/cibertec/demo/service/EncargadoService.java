@@ -2,13 +2,13 @@ package com.cibertec.demo.service;
 
 
 
-import com.cibertec.demo.model.Encargados;
+import com.cibertec.demo.model.Encargado;
 
 import java.util.List;
 
 public interface EncargadoService {
-    List<Encargados> listarEncargados();
-    void guardarEncargos(Encargados encargados);
-    Encargados obtenerEncargados(long id);
+    List<Encargado> listarEncargados();
+    void guardarEncargos(Encargado encargado);
+    Encargado obtenerEncargados(long id);
     void eliminarEncargados (long id);
 }
